@@ -1,7 +1,7 @@
 {
   "name": "@osl/flagship",
   "version": "0.1.0",
-  "description": "Deterministic feature flag evaluation with targeting rules and weighted rollouts.",
+  "description": "确定性的 Feature Flag 评估器 / Deterministic feature flag evaluation with targeting rules and weighted rollouts.",
   "type": "module",
   "main": "src/index.js",
   "exports": {

@@ -1,7 +1,7 @@
 {
   "name": "@osl/loglens",
   "version": "0.1.0",
-  "description": "Log parsing, summarization, and anomaly detection utilities with a streaming CLI.",
+  "description": "日志解析、摘要与异常检测工具 / Log parsing, summarization, and anomaly detection utilities with a streaming CLI.",
   "type": "module",
   "main": "src/index.js",
   "exports": {

@@ -2,7 +2,7 @@
   "name": "open-source-lab",
   "version": "0.1.0",
   "private": true,
-  "description": "A small monorepo of production-minded open source JavaScript libraries.",
+  "description": "生产可用的小型开源 JavaScript 库 monorepo / Production-minded open-source JavaScript libraries in a small monorepo.",
   "type": "module",
   "workspaces": [
     "packages/*"

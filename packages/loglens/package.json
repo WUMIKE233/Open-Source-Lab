@@ -1,0 +1,23 @@
+{
+  "name": "@osl/loglens",
+  "version": "0.1.0",
+  "description": "Log parsing, summarization, and anomaly detection utilities with a streaming CLI.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "loglens": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "logs",
+    "observability",
+    "anomaly-detection",
+    "cli"
+  ],
+  "license": "MIT"
+}

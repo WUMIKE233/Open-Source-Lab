@@ -1,0 +1,20 @@
+{
+  "name": "@osl/event-forge",
+  "version": "0.1.0",
+  "description": "A lightweight workflow DAG runner with retries, timeouts, cancellation, and hooks.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "workflow",
+    "dag",
+    "orchestration",
+    "scheduler"
+  ],
+  "license": "MIT"
+}

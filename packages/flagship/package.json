@@ -1,0 +1,23 @@
+{
+  "name": "@osl/flagship",
+  "version": "0.1.0",
+  "description": "Deterministic feature flag evaluation with targeting rules and weighted rollouts.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "flagship": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "feature-flags",
+    "experimentation",
+    "rollout",
+    "targeting"
+  ],
+  "license": "MIT"
+}

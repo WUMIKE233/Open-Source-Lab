@@ -12,12 +12,21 @@ Open Source Lab 是一个零运行时依赖的 JavaScript 开源 monorepo，收�
 - `@osl/flagship`：确定性的 Feature Flag 评估器，支持用户分群规则、稳定分桶和加权灰度发布。
 - `@osl/loglens`：日志解析与异常检测工具，支持结构化日志摘要、指标异常识别和流式 CLI。
 
+## 文档与示例
+
+- [架构说明](docs/architecture.md)
+- [API Reference](docs/api/README.md)
+- [可运行示例](examples)
+- [更新日志](CHANGELOG.md)
+- [贡献指南](CONTRIBUTING.md)
+
 ## 快速开始
 
 ```bash
 git clone https://github.com/WUMIKE233/Open-Source-Lab.git
 cd Open-Source-Lab
 npm test
+npm run examples
 ```
 
 每个包都以 ESM 为优先设计，支持 Node.js 20 及以上版本。
@@ -33,6 +42,10 @@ docs/
   architecture.md
 scripts/
   smoke-check.js
+examples/
+  event-forge/
+  flagship/
+  loglens/
 ```
 
 ## 设计原则
@@ -79,12 +92,21 @@ The goal is not to build large frameworks. Instead, this repository provides sma
 - `@osl/flagship`: a deterministic feature flag evaluator with segment rules, stable bucketing, and weighted rollouts.
 - `@osl/loglens`: a log parsing and anomaly detection toolkit with structured summaries, metric anomaly detection, and a streaming CLI.
 
+## Docs and Examples
+
+- [Architecture](docs/architecture.md)
+- [API Reference](docs/api/README.md)
+- [Runnable examples](examples)
+- [Changelog](CHANGELOG.md)
+- [Contributing guide](CONTRIBUTING.md)
+
 ## Quick Start
 
 ```bash
 git clone https://github.com/WUMIKE233/Open-Source-Lab.git
 cd Open-Source-Lab
 npm test
+npm run examples
 ```
 
 Each package is ESM-first and supports Node.js 20 or newer.
@@ -100,6 +122,10 @@ docs/
   architecture.md
 scripts/
   smoke-check.js
+examples/
+  event-forge/
+  flagship/
+  loglens/
 ```
 
 ## Design Principles

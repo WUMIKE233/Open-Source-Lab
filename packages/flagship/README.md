@@ -30,3 +30,8 @@ console.log(result.value, result.reason);
 ## Rule Operators
 
 `eq`, `neq`, `in`, `contains`, `gt`, `gte`, `lt`, `lte`, `regex`, and `exists` are supported.
+
+## More
+
+- API reference: [`docs/api/flagship.md`](../../docs/api/flagship.md)
+- Runnable example: [`examples/flagship/rollout.js`](../../examples/flagship/rollout.js)

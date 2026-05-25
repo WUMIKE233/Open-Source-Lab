@@ -10,6 +10,11 @@
   "bin": {
     "flagship": "./src/cli.js"
   },
+  "files": [
+    "src",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "test": "node --test test/*.test.js"
   },
@@ -19,5 +24,14 @@
     "rollout",
     "targeting"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WUMIKE233/Open-Source-Lab.git",
+    "directory": "packages/flagship"
+  },
+  "bugs": {
+    "url": "https://github.com/WUMIKE233/Open-Source-Lab/issues"
+  },
+  "homepage": "https://github.com/WUMIKE233/Open-Source-Lab/tree/main/packages/flagship#readme",
   "license": "MIT"
 }

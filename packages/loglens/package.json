@@ -10,6 +10,11 @@
   "bin": {
     "loglens": "./src/cli.js"
   },
+  "files": [
+    "src",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "test": "node --test test/*.test.js"
   },
@@ -19,5 +24,14 @@
     "anomaly-detection",
     "cli"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WUMIKE233/Open-Source-Lab.git",
+    "directory": "packages/loglens"
+  },
+  "bugs": {
+    "url": "https://github.com/WUMIKE233/Open-Source-Lab/issues"
+  },
+  "homepage": "https://github.com/WUMIKE233/Open-Source-Lab/tree/main/packages/loglens#readme",
   "license": "MIT"
 }

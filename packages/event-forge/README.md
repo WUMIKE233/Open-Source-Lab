@@ -24,3 +24,8 @@ console.log(run.results.report);
 - cooperative cancellation through `AbortSignal`
 - lifecycle hooks for metrics and observability
 - deterministic task results keyed by task id
+
+## More
+
+- API reference: [`docs/api/event-forge.md`](../../docs/api/event-forge.md)
+- Runnable example: [`examples/event-forge/pipeline.js`](../../examples/event-forge/pipeline.js)

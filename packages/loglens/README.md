@@ -21,3 +21,8 @@ cat app.log | loglens --metric latency
 ```
 
 The CLI reads newline-delimited logs from stdin and prints JSON.
+
+## More
+
+- API reference: [`docs/api/loglens.md`](../../docs/api/loglens.md)
+- Runnable example: [`examples/loglens/analyze-logs.js`](../../examples/loglens/analyze-logs.js)

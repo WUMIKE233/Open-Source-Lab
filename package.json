@@ -8,9 +8,18 @@
     "packages/*"
   ],
   "scripts": {
+    "examples": "node examples/event-forge/pipeline.js && node examples/flagship/rollout.js && node examples/loglens/analyze-logs.js",
     "test": "node --test \"packages/*/test/*.test.js\"",
     "check": "node scripts/smoke-check.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WUMIKE233/Open-Source-Lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WUMIKE233/Open-Source-Lab/issues"
+  },
+  "homepage": "https://github.com/WUMIKE233/Open-Source-Lab#readme",
   "engines": {
     "node": ">=20"
   },

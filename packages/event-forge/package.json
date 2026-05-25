@@ -1,7 +1,7 @@
 {
   "name": "@osl/event-forge",
   "version": "0.1.0",
-  "description": "A lightweight workflow DAG runner with retries, timeouts, cancellation, and hooks.",
+  "description": "轻量级工作流 DAG 执行器 / Lightweight workflow DAG runner with retries, timeouts, cancellation, and hooks.",
   "type": "module",
   "main": "src/index.js",
   "exports": {

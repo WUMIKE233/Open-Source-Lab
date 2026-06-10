@@ -10,7 +10,7 @@ Open Source Lab 是一个零运行时依赖的 JavaScript 开源 monorepo，收�
 
 - `@osl/event-forge`：轻量级工作流 DAG 执行器，支持依赖校验、重试、超时、取消和生命周期 hooks。
 - `@osl/flagship`：确定性的 Feature Flag 评估器，支持用户分群规则、稳定分桶和加权灰度发布。
-- `@osl/loglens`：日志解析与异常检测工具，支持结构化日志摘要、指标异常识别和流式 CLI。
+- `@osl/loglens`：日志解析与异常检测工具，支持结构化日志摘要、指标异常识别、错误预算摘要和流式 CLI。
 
 ## 文档与示例
 
@@ -90,7 +90,7 @@ The goal is not to build large frameworks. Instead, this repository provides sma
 
 - `@osl/event-forge`: a lightweight workflow DAG runner with dependency validation, retries, timeouts, cancellation, and lifecycle hooks.
 - `@osl/flagship`: a deterministic feature flag evaluator with segment rules, stable bucketing, and weighted rollouts.
-- `@osl/loglens`: a log parsing and anomaly detection toolkit with structured summaries, metric anomaly detection, and a streaming CLI.
+- `@osl/loglens`: a log parsing and anomaly detection toolkit with structured summaries, metric anomaly detection, error-budget summaries, and a streaming CLI.
 
 ## Docs and Examples
 

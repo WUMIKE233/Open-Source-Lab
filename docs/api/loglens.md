@@ -35,6 +35,17 @@ Options:
 - `metric`: field name to inspect, default `latency`
 - `zScore`: anomaly threshold, default `2.5`
 
+## `summarizeErrorBudget(events, options?)`
+
+Computes a small reliability/error-budget summary from parsed log events.
+
+Options:
+
+- `targetReliability`: desired reliability as a decimal, default `0.99`
+- `errorLevels`: log levels that count as errors, default `["error", "fatal"]`
+
+Returns total events, observed errors, allowed errors, remaining budget, burn percentage, and service-level error rates.
+
 ## `collectStdin(stream)`
 
 Reads newline-delimited logs from a stream and returns parsed events.

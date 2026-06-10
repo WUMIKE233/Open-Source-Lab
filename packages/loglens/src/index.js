@@ -115,6 +115,47 @@ export function detectMetricAnomalies(events, options = {}) {
     .filter((item) => Math.abs(item.zScore) >= threshold);
 }
 
+export function summarizeErrorBudget(events, options = {}) {
+  const targetReliability = Number(options.targetReliability ?? 0.99);
+  const errorLevels = new Set((options.errorLevels ?? ["error", "fatal"]).map((level) => String(level).toLowerCase()));
+  const normalized = events.filter(Boolean).map((event) => normalizeEvent(event));
+  const byService = new Map();
+  let observedErrors = 0;
+
+  for (const event of normalized) {
+    const service = event.fields.service ?? "unknown";
+    const item = byService.get(service) ?? { service, total: 0, errors: 0 };
+    const isError = errorLevels.has(event.level);
+    item.total += 1;
+    if (isError) {
+      item.errors += 1;
+      observedErrors += 1;
+    }
+    byService.set(service, item);
+  }
+
+  const total = normalized.length;
+  const allowedErrorRate = Math.max(0, Math.min(1, 1 - targetReliability));
+  const allowedErrors = Math.floor(total * allowedErrorRate);
+
+  return {
+    targetReliability,
+    total,
+    observedErrors,
+    allowedErrors,
+    remainingErrors: allowedErrors - observedErrors,
+    burnedPercent: allowedErrors === 0
+      ? (observedErrors > 0 ? 100 : 0)
+      : Number(((observedErrors / allowedErrors) * 100).toFixed(2)),
+    byService: [...byService.values()]
+      .map((item) => ({
+        ...item,
+        errorRate: item.total === 0 ? 0 : Number((item.errors / item.total).toFixed(4))
+      }))
+      .sort((a, b) => b.errors - a.errors || b.total - a.total)
+  };
+}
+
 export async function collectStdin(stream) {
   let data = "";
   for await (const chunk of stream) {

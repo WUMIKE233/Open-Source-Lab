@@ -44,7 +44,7 @@ Options:
 - `targetReliability`: desired reliability as a decimal, default `0.99`
 - `errorLevels`: log levels that count as errors, default `["error", "fatal"]`
 
-Returns total events, observed errors, allowed errors, remaining budget, burn percentage, and service-level error rates.
+Returns total events, observed errors, allowed errors, remaining budget, burn percentage, `status`, `breached`, and service-level error rates plus per-service allowed/remaining errors.
 
 ## `collectStdin(stream)`
 

@@ -58,9 +58,15 @@ test("summarizes error budget burn by service", () => {
   assert.equal(budget.allowedErrors, 2);
   assert.equal(budget.observedErrors, 2);
   assert.equal(budget.remainingErrors, 0);
+  assert.equal(budget.status, "exhausted");
+  assert.equal(budget.breached, false);
   assert.equal(budget.burnedPercent, 100);
   assert.deepEqual(budget.byService.map((item) => [item.service, item.errors]), [
     ["api", 1],
     ["worker", 1]
+  ]);
+  assert.deepEqual(budget.byService.map((item) => [item.service, item.allowedErrors, item.remainingErrors]), [
+    ["api", 1, 0],
+    ["worker", 1, 0]
   ]);
 });

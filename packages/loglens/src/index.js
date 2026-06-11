@@ -137,20 +137,26 @@ export function summarizeErrorBudget(events, options = {}) {
   const total = normalized.length;
   const allowedErrorRate = Math.max(0, Math.min(1, 1 - targetReliability));
   const allowedErrors = Math.floor(total * allowedErrorRate);
+  const remainingErrors = allowedErrors - observedErrors;
+  const breached = observedErrors > allowedErrors;
 
   return {
     targetReliability,
     total,
     observedErrors,
     allowedErrors,
-    remainingErrors: allowedErrors - observedErrors,
+    remainingErrors,
+    breached,
+    status: breached ? "breached" : remainingErrors === 0 ? "exhausted" : "available",
     burnedPercent: allowedErrors === 0
       ? (observedErrors > 0 ? 100 : 0)
       : Number(((observedErrors / allowedErrors) * 100).toFixed(2)),
     byService: [...byService.values()]
       .map((item) => ({
         ...item,
-        errorRate: item.total === 0 ? 0 : Number((item.errors / item.total).toFixed(4))
+        errorRate: item.total === 0 ? 0 : Number((item.errors / item.total).toFixed(4)),
+        allowedErrors: Math.floor(item.total * allowedErrorRate),
+        remainingErrors: Math.floor(item.total * allowedErrorRate) - item.errors
       }))
       .sort((a, b) => b.errors - a.errors || b.total - a.total)
   };

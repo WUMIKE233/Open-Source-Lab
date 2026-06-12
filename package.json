@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "examples": "node examples/event-forge/pipeline.js && node examples/flagship/rollout.js && node examples/loglens/analyze-logs.js",
-    "test": "node --test \"packages/*/test/*.test.js\"",
+    "test": "node scripts/run-tests.js",
     "check": "node scripts/smoke-check.js"
   },
   "repository": {
